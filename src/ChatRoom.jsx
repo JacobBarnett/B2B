@@ -7,7 +7,7 @@ import {
   Shield,
 } from "lucide-react";
 
-const ChatRoom = () => {
+const ChatRoom = ({ currentUser }) => {
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -32,7 +32,7 @@ const ChatRoom = () => {
 
     const newMessage = {
       id: Date.now(),
-      user: "My Business (You)",
+      user: currentUser,
       text: input,
       type: msgType,
     };
